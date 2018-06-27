@@ -13,6 +13,7 @@ router.get('/all' ,function (req, res, next) {
         } else {
             console.log(results);
             data = results.rows;
+            res.header('Content-Type', 'application/json; charset=utf-8');
             res.send(data);
             console.log("success");
         }
@@ -29,6 +30,7 @@ router.get('/single' ,function (req, res, next) {
         } else {
             console.log(results);
             data = results.rows;
+            res.header('Content-Type', 'application/json; charset=utf-8');
             res.send(data);
             console.log("success");
         }

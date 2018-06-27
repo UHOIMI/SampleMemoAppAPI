@@ -12,9 +12,11 @@ router.post('/' ,function (req, res, next) {
     client.query(sql, function(err,results){
         if(err) {
             console.log(err.name);
+            res.header('Content-Type', 'application/json; charset=utf-8');
             res.send(err);
         }else{
             console.log("success");
+            res.header('Content-Type', 'application/json; charset=utf-8');
             res.send("success");
         }
     });
